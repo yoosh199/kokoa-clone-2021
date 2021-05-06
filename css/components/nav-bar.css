@@ -1,0 +1,90 @@
+.nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f9f9fa;
+    padding: 20px 50px;
+    box-sizing: border-box;
+    border-top: 2px solid rgba(0,0,0,0.5);
+  }
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__link{
+  position: relative;
+  color: #2f363e;
+}
+
+@keyframes notificationAnimation {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-5px) rotateY(1000deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.nav__notification{
+  
+  background-color: tomato;
+  width: 30px;
+  height: 30px;
+  display: flex;
+
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: white;
+  position: absolute;
+  /* transform : translateX(20px) translateY(-10px); */
+  left: 15px;
+  bottom: 15px;
+  animation: notificationAnimation 2s ease-in-out infinite;
+}
+
+.nav__dot {
+  background-color: tomato;
+  width: 8px;
+  height: 8px;
+  border-radius: 5px;
+  position: absolute;
+  left: 32px;
+  top: -2px;
+}
+
+@keyframes appearBtn {
+  from {
+    
+    
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+
+}
+.nav__btn {
+  transform: translateY(60px);
+  animation: appearBtn 0.3s ease-in-out forwards;
+  opacity: 0;
+    
+}
+
+.nav__btn:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.nav__btn:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.nav__btn:nth-child(4) {
+  animation-delay: 0.9s;
+}
